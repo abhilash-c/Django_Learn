@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+    <link rel="stylesheet" href="{% static '\css\first.css' %}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="18" width="100%">
+  <tr>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>AGE</th>
+    <th>PLACE</th>
+    <th>E-MAIL</th>
+  </tr>
+  <tr>
+    {% for x in detail %}
+      <td>{{x.id}}</td>
+      <td>{{x.name}}</td>
+      <td>{{x.age}}</td>
+      <td>{{x.place}}</td>
+      <td>{{x.email}}</td>
+  </tr>
+    {% endfor %}
+
+</table>
+</body>
+</html>
